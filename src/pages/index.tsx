@@ -1,4 +1,4 @@
-import Home from "./Home"
+import Landing from "./Landing"
 import Page404 from "./Page404"
 
-export { Home, Page404 }
+export { Landing, Page404 }

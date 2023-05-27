@@ -1,5 +1,11 @@
+import { AppBar } from "@mui/material"
+
 const Header = () => {
-	return <header>Header</header>
+	return (
+		<AppBar component={"header"} sx={{ padding: "1rem" }}>
+			Header
+		</AppBar>
+	)
 }
 
 export default Header
