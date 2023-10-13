@@ -1,5 +1,11 @@
+import Home from './containers/Home'
+
 function App() {
-	return <>To-do App</>
+	return (
+		<>
+			<Home />
+		</>
+	)
 }
 
 export default App
