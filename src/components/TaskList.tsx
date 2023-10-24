@@ -1,7 +1,7 @@
 import { Box, Container } from '@mui/material'
 import { FC } from 'react'
 import Task from './Task'
-import { TaskType } from '../types/items'
+import { TaskType } from '../types/entities'
 
 const tasks: TaskType[] = [
 	{
