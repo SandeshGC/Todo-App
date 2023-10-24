@@ -1,24 +1,20 @@
-import { Box, Container, TextField, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import { FC, ReactElement } from 'react'
 import Header from '../components/Header'
+import TaskList from '../components/TaskList'
+import TaskInputField from '../components/TaskInputField'
 
 interface HomeProps {}
 
 const Home: FC<HomeProps> = ({}): ReactElement => {
 	return (
-		<Box component={"body"}>
+		<Box component={'body'}>
 			<Header />
 
-			<Container>
-				<Box>
-					<TextField label="Add a task" variant="standard" />
-				</Box>
-			</Container>
-			<Container>
-				<Typography variant="body1">
-					Here will be the list of items like in google keep
-				</Typography>
-			</Container>
+			<TaskInputField />
+
+			<TaskList />
+
 		</Box>
 	)
 }
