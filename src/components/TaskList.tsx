@@ -22,7 +22,13 @@ const TaskList: FC<TaskListProps> = ({}) => {
 		<Container>
 			<Box>
 				{tasks.map(task => {
-					return <Task title={task.title} description={task.description} />
+					return (
+						<Task
+							key={task.id}
+							title={task.title}
+							description={task.description}
+						/>
+					)
 				})}
 			</Box>
 		</Container>
