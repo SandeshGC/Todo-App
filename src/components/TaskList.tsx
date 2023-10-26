@@ -17,7 +17,7 @@ const TaskList: FC<TaskListProps> = ({ id: listId, title, tasks }) => {
 						return (
 							<Task
 								key={task.id}
-								// listId={listId}
+								listId={listId}
 								id={task.id}
 								title={task.title}
 								isComplete={task.isComplete}
