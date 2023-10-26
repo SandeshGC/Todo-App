@@ -2,13 +2,16 @@
 	{
 		"id": "test1",
 		"title": "First task",
-		"description": "This is task 1 very minor task., unimportant.",
-		"isComplete": false
+		"isComplete": true
 	},
 	{
 		"id": "test2",
 		"title": "Task 2",
-		"description": "This is task 2. test",
+		"isComplete": false
+	},
+	{
+		"id": "third",
+		"title": "Task 3",
 		"isComplete": false
 	}
 ]
