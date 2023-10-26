@@ -1,16 +1,15 @@
 import { Box, Typography } from '@mui/material'
 import { FC } from 'react'
+import { TaskType } from '../types/entities'
 
-interface TaskProps {
-	title: string
-	description: string
-}
+interface TaskProps extends TaskType {}
 
-const Task: FC<TaskProps> = ({ title, description }) => {
+const Task: FC<TaskProps> = ({ id, title, description, isComplete }) => {
 	return (
 		<Box>
-			<Typography variant='h6'>{title}</Typography>
-			<Typography variant='body2'>{description}</Typography>
+			
+			<Typography variant="h6">{title}</Typography>
+			<Typography variant="body2">{description}</Typography>
 		</Box>
 	)
 }

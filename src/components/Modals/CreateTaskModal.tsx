@@ -1,13 +1,10 @@
-import { Box, Button, IconButton, TextField, Typography } from '@mui/material'
+import { Box, Button, IconButton, TextField } from '@mui/material'
 import Modal from '@mui/material/Modal'
 import CloseIcon from '@mui/icons-material/Close'
-import AddIcon from '@mui/icons-material/Add'
 import { useContext } from 'react'
-import { ModalContext } from '../../contexts/CreateTodoModalContext'
+import { ModalContext } from '../../contexts/ModalContext'
 
-type Props = {}
-
-const CreateTaskModal = (props: Props) => {
+const CreateTaskModal = () => {
 	const modals = useContext(ModalContext)
 
 	console.log(modals.isCreateTaskModalOpen)

@@ -1,23 +1,16 @@
 import { Box, Container } from '@mui/material'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import Task from './Task'
 import { TaskType } from '../types/entities'
+import taskList from '../data/index.json'
 
-const tasks: TaskType[] = [
-	{
-		id: 'test1',
-		title: 'Task1',
-		description: 'This is task 1 very minor task., unimportant.'
-	},
-	{
-		id: 'test2',
-		title: 'Task 2',
-		description: 'This is task 2. test'
-	}
-]
 interface TaskListProps {}
 
 const TaskList: FC<TaskListProps> = ({}) => {
+	const tasks: TaskType[] = taskList
+
+	console.log(tasks)
+
 	return (
 		<Container>
 			<Box>
@@ -25,8 +18,10 @@ const TaskList: FC<TaskListProps> = ({}) => {
 					return (
 						<Task
 							key={task.id}
+							id={task.id}
 							title={task.title}
 							description={task.description}
+							isComplete={task.isComplete}
 						/>
 					)
 				})}

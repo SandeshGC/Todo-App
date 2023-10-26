@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
-import CreateTodoModalProvider from './CreateTodoModalContext'
+import ModalProvider from './ModalContext'
 
 const ContextProvider = ({ children }: { children: ReactNode }) => {
-	return <CreateTodoModalProvider>{children}</CreateTodoModalProvider>
+	return <ModalProvider>{children}</ModalProvider>
 }
 
 export default ContextProvider
