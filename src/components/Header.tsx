@@ -9,7 +9,7 @@ const Header: FC<HeaderProps> = ({}) => {
 		<Box borderBottom={'2px solid #e5e5e5'} bgcolor={'#e5e5e5'}>
 			<Container>
 				<Typography variant="h1" textAlign={'center'} fontSize={'large'}>
-					<Link to={'/'}>Your lists</Link>
+					<Link to={'/'}>Toodoo</Link>
 				</Typography>
 			</Container>
 		</Box>
