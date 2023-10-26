@@ -1,30 +1,30 @@
-import { Box, Container } from '@mui/material'
-import { FC, useEffect } from 'react'
+import { Box, Container, Typography } from '@mui/material'
+import { FC, createContext } from 'react'
 import Task from './Task'
-import { TaskType } from '../types/entities'
-import taskList from '../data/index.json'
+import { TaskListType } from '../types/entities'
 
-interface TaskListProps {}
+interface TaskListProps extends TaskListType {}
 
-const TaskList: FC<TaskListProps> = ({}) => {
-	const tasks: TaskType[] = taskList
+export const TaskListContext = createContext({})
 
-	console.log(tasks)
-
+const TaskList: FC<TaskListProps> = ({ id: listId, title, tasks }) => {
 	return (
 		<Container>
-			<Box>
-				{tasks.map(task => {
-					return (
-						<Task
-							key={task.id}
-							id={task.id}
-							title={task.title}
-							description={task.description}
-							isComplete={task.isComplete}
-						/>
-					)
-				})}
+			<Box py={4}>
+				<TaskListContext.Provider value={listId}>
+					<Typography variant="h6">{title}</Typography>
+					{tasks.map(task => {
+						return (
+							<Task
+								key={task.id}
+								// listId={listId}
+								id={task.id}
+								title={task.title}
+								isComplete={task.isComplete}
+							/>
+						)
+					})}
+				</TaskListContext.Provider>
 			</Box>
 		</Container>
 	)

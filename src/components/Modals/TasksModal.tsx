@@ -4,7 +4,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 
-const CreateTaskModal = () => {
+const TasksModal = () => {
 	const modals = useContext(ModalContext)
 
 	console.log(modals.isCreateTaskModalOpen)
@@ -46,4 +46,4 @@ const CreateTaskModal = () => {
 	)
 }
 
-export default CreateTaskModal
+export default TasksModal

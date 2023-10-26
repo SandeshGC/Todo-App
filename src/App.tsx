@@ -1,11 +1,11 @@
-import Home from './containers/Home'
 import ContextProvider from './contexts/ContextProvider'
+import UserRoutes from './Routes'
 
 function App() {
 	return (
 		<>
 			<ContextProvider>
-				<Home />
+				<UserRoutes />
 			</ContextProvider>
 		</>
 	)
